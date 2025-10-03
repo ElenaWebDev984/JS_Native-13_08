@@ -48,3 +48,29 @@ function superPop(array, el) {
 
 console.log(superPop(numbers))
 console.log(numbers)
+
+
+// TODO method includes
+
+// TODO есть ли такой эл-т в массиве
+
+function superIncludes(array,el) {
+    let result = false
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === el) {
+            result = true
+        }
+    }
+    return result;
+}
+
+console.log(superIncludes(numbers, 103));
+
+function superIncludes2(array,el) {
+    for (item of array) {
+        if (item === el) return  true
+    }
+    return false
+}
+
+console.log(superIncludes(numbers, 3));

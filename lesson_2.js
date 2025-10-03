@@ -74,3 +74,19 @@ function superIncludes2(array,el) {
 }
 
 console.log(superIncludes(numbers, 3));
+
+
+// TODO method reverse
+
+// TODO переворачивает в обратную сторону порядок эл-в в массиве
+
+function superReverse(array) {
+    for (let i = 0; i < array.length / 2; i++) {
+        const temp = array[array.length - 1 - i];
+        array[array.length - 1 - i] = array[i];
+        array[i] = temp;
+    }
+    return array;
+}
+
+console.log(superReverse(numbers))

@@ -3,6 +3,8 @@
 // array[0] - обратиться к 1му эл-ту массива
 // array[array.length - 1] - обратиться к последнему эл-ту массива
 
+// TODO method push
+
 const numbers = [1, 2, 3, 4, 5, 6];
 
 console.log(numbers.push(10, 11))
@@ -32,4 +34,17 @@ function superPushPlus2(array, ...rest) {
     return array.length;
 }
 superPushPlus2(numbers, 100, 200)
+console.log(numbers)
+
+
+// TODO method pop
+
+// TODO удаляем последний эл-т массива
+function superPop(array, el) {
+    const lastEl = array[array.length - 1];
+    array.length = array.length - 1;
+    return lastEl;
+}
+
+console.log(superPop(numbers))
 console.log(numbers)

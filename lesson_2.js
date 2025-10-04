@@ -90,3 +90,59 @@ function superReverse(array) {
 }
 
 console.log(superReverse(numbers))
+
+
+// TODO method indexOf
+
+// TODO возвращает 1й индекс, по кот. данный эл-т может быть найден в массиве. Или -1
+
+function superIndexOf(array, el) {
+    for (let i = 0; i < array.length; i++) {
+        if(array[i] === el) return i;
+    }
+    return -1;
+}
+console.log(superIndexOf(numbers, 55));
+console.log(superIndexOf(numbers, 5));
+
+
+function superIndexOf2(array, el,fromIndex = 0) {
+    if(fromIndex >= array.length) return -1;
+    if(fromIndex < 0) {
+        fromIndex = array.length + fromIndex;
+    }
+
+    for (let i = fromIndex; i < array.length; i++) {
+        if(array[i] === el) return i;
+    }
+    return -1;
+}
+console.log(superIndexOf2(numbers, 5, 25));
+console.log(superIndexOf2(numbers, 2, -3));
+
+function superIndexOf3(array, el,fromIndex = 0) {
+    if(fromIndex >= array.length) {
+        if(fromIndex < 0) {
+            fromIndex = array.length + fromIndex;
+        }
+
+        for (let i = fromIndex; i < array.length; i++) {
+            if(array[i] === el) return i;
+        }
+    }
+    return -1;
+}
+
+
+function superIndexOf4(array, el,fromIndex = 0) {
+    if(fromIndex >= array.length) {
+        fromIndex = fromIndex < 0
+            ? fromIndex = array.length + fromIndex
+            : fromIndex
+        }
+
+        for (let i = fromIndex; i < array.length; i++) {
+            if(array[i] === el) return i;
+        }
+    return -1;
+}
